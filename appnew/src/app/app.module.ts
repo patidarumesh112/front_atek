@@ -10,7 +10,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { RouterModule } from '@angular/router';
 import { AuthGuard } from './auth.guard';
 import { HttpClientModule } from '@angular/common/http';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent, pathMatch: 'full' },
       { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
-      { path: '', redirectTo: '/login', pathMatch: 'full' }
+      { path: '', redirectTo: '/login', pathMatch: 'full' },
+      { path: 'profile', component: ProfileComponent },
     ])
   ],
   providers: [],

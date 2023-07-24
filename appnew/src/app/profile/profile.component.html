@@ -1,1 +1,14 @@
-<p>profile works!</p>
+<div class="profile-container">
+    <form (submit)="updateDetails()">
+      <input type="text" [(ngModel)]="user.username" name="username" placeholder="Name">
+      <input type="email" [(ngModel)]="user.email" name="email" placeholder="Email">
+      <!-- Add more fields as needed -->
+      <button type="submit">Update Details</button>
+    </form>
+  
+    <form (submit)="uploadImage()">
+      <input type="file" (change)="onImageSelected($event)">
+      <button type="submit">Upload Image</button>
+    </form>
+  </div>
+  
